@@ -1,43 +1,38 @@
 package Partcise_Automation;
 
+import Reusable_Libaray.Resuable_Annotations;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
-public class Saks_FifthAvenue {
+public class Saks_FifthAvenue extends Resuable_Annotations {
+    @Test
     public static void main(String[] args) {
 
-//set up the property of chromedriver
- System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver");
-//Declare and Define Chromeoption
-        ChromeOptions options=new ChromeOptions();
-        // Add Arguments as you need
-        // Add incognito Mode
-        options.addArguments("incognito");
-        //Maximize your browser
-        options.addArguments("Start-Maximized");
-        //Sets as a Headless
-        options.addArguments("headless");
-// declare and define web driver
-        WebDriver driver=new ChromeDriver();
-        // Declare the variable String
-        String[]Saks=new String[3];
-        Saks[0]="Shirt";
-        Saks[1]="Pants";
-        Saks[2]="Coat";
-        // By using for loop
-        for(int i=0;i<Saks.length;i++);
-        // Navigate to google
-        driver.navigate().to("https://www.Allsaint.com");
-        //Search on Saks
-     //  driver.findElement(By.xpath("//*[@name='q']")).sendKeys(Saks[0]);
-        // click on Summit
-      //  driver.findElement(By.xpath(""))
+        // Initialized boolean variables a1 and b1
+        String  ActualTittle="kunsang";
+        String  ExpectedTittle="kunsang";
+          boolean b1=false;
+          boolean b2=true;
 
+        // if the condition matches then a1 will print
+       //  if(ActualTittle==ExpectedTittle){System.out.println(b2);}
+      //   else{System.out.println(b1);}
+
+
+
+        //    String ActualTittle="Kunsang";
+        //    String ExpectedTittle="Kunsang";
+            Assert.assertEquals(ActualTittle,ExpectedTittle);
 
 
 
 
     }//end of main method
+
+
+
 }//end of java class
